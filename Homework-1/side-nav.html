@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Side Nav</title>
+    <style>
+        body {
+            margin: 0px;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .nav-area {
+            min-width: 250px;
+            max-width: 250px;
+            height: 1000px;
+            background-color: #1d1919;
+        }
+
+        .intro {
+            padding-top: 3rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .img-area {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #fff;
+            display: inline-block;
+        }
+
+        .img-area>img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .navigation-list {
+            width: 100%;
+            font-size: 24px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .navigation-item {
+            /*margin: 1em 0;*/
+            padding: 0.6em 0;
+            border-top: 1px solid #403d3d;
+            border-bottom: 1px solid #403d3d;
+        }
+
+        .navigation-item>a {
+            text-decoration: none;
+            padding-left: 0.5em;
+            color: #737373;
+            font-size:20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .navigation-item:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .navigation-item>a:hover {
+            color: rgb(86, 255, 20);
+        }
+    </style>
+</head>
+<body>
+<nav class="nav-area">
+    <div class="intro">
+        <div class="img-area">
+            <img src="images/avatar.png" alt="1">
+        </div>
+        <h1>John Snow</h1>
+        <ul class="navigation-list">
+            <li class="navigation-item">
+                <a href="">About Me</a>
+            </li>
+            <li class="navigation-item">
+                <a href="">Education</a>
+            </li>
+            <li class="navigation-item">
+                <a href="">Experience</a>
+            </li>
+            <li class="navigation-item">
+                <a href="">Skills</a>
+            </li>
+            <li class="navigation-item">
+                <a href="">Portfolio</a>
+            </li>
+            <li class="navigation-item">
+                <a href="">Contacts</a>
+            </li>
+            <li class="navigation-item">
+                <a href="">Feedback</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+</body>
+</html>

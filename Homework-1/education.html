@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Education block</title>
+    <style>
+        .education-section {
+            max-width: 900px;
+            margin: 40px;
+        }
+
+        .title {
+            font-size: 3em;
+            color: #00ac26;
+        }
+        .chronology-block {
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            overflow:auto;
+            /*education list should be scrollable inside fixed-height box.*/
+        }
+        .edu-item {
+            display: flex;
+            flex-direction: row;
+            margin: 1em 0;
+
+        }
+        .edu-date {
+            font-weight: bold;
+            width: 20%;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .edu-description {
+            background-color: #e2e2e2;
+            border-bottom: 1px solid #9f9f9f;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<section class="education-section">
+    <h1 class="title">
+        Education
+    </h1>
+
+    <div class="chronology-block">
+        <div class="edu-item">
+            <div class="edu-date">
+                1991
+            </div>
+            <div class="edu-description">
+                <h1>Title</h1>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque ipsam labore nemo, porro
+                possimus quaerat repellendus sed ut voluptatem. Aperiam atque consequatur culpa dolorum, ea eius esse
+                explicabo facere illo in laboriosam modi optio pariatur possimus praesentium quibusdam quo repellendus,
+                soluta suscipit tempora tempore unde vel veniam voluptatibus voluptatum.
+            </div>
+        </div>
+        <div class="edu-item">
+            <div class="edu-date">
+                1992
+            </div>
+            <div class="edu-description">
+                <h1>Title</h1>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque ipsam labore nemo, porro
+                possimus quaerat repellendus sed ut voluptatem. Aperiam atque consequatur culpa dolorum, ea eius esse
+                explicabo facere illo in laboriosam modi optio pariatur possimus praesentium quibusdam quo repellendus,
+                soluta suscipit tempora tempore unde vel veniam voluptatibus voluptatum.
+            </div>
+        </div>
+        <div class="edu-item">
+            <div class="edu-date">
+                1992
+            </div>
+            <div class="edu-description">
+                <h1>Title</h1>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque ipsam labore nemo, porro
+                possimus quaerat repellendus sed ut voluptatem. Aperiam atque consequatur culpa dolorum, ea eius esse
+                explicabo facere illo in laboriosam modi optio pariatur possimus praesentium quibusdam quo repellendus,
+                soluta suscipit tempora tempore unde vel veniam voluptatibus voluptatum.
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
