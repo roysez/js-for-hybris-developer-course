@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedbacks</title>
+    <style>
+        .feedbacks-section {
+            max-width: 900px;
+            margin: 40px;
+        }
+
+        .title {
+            font-size: 3em;
+            color: #00ac26;
+        }
+
+        .feedback-content {
+            background-color: #dedede;
+            padding: 1.3rem;
+        }
+
+        .feedback-author {
+            position: relative;
+            top:-12px;
+            display: flex;
+            /* align-self: center;    <---- REMOVE */
+            align-items: center;   /* <---- NEW    */
+        }
+        .img-area {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #fff;
+            display: inline-block;
+        }
+
+        .img-area > img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .author-name {
+            padding-left: 1.3rem;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+<section class="feedbacks-section">
+    <h1 class="title">
+        About me
+    </h1>
+    <div class="feedback">
+        <div class="feedback-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus, accusantium assumenda beatae
+            deserunt dignissimos ea ipsa itaque iusto maxime neque nisi, placeat quis quisquam sequi sint tempora
+            temporibus vel?
+        </div>
+        <div class="feedback-author">
+            <div class="img-area">
+                <img alt="" class="feedback-author-avatar" src="images/avatar.png">
+            </div>
+            <span class="author-name">Marthin Lutther</span>
+        </div>
+    </div>
+    <div class="feedback">
+        <div class="feedback-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus, accusantium assumenda beatae
+            deserunt dignissimos ea ipsa itaque iusto maxime neque nisi, placeat quis quisquam sequi sint tempora
+            temporibus vel?
+        </div>
+        <div class="feedback-author">
+            <div class="img-area">
+                <img alt="" class="feedback-author-avatar" src="images/avatar.png">
+            </div>
+            <span class="author-name">Marthin Lutther</span>
+        </div>
+    </div>
+    <div class="feedback">
+        <div class="feedback-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus, accusantium assumenda beatae
+            deserunt dignissimos ea ipsa itaque iusto maxime neque nisi, placeat quis quisquam sequi sint tempora
+            temporibus vel?
+        </div>
+        <div class="feedback-author">
+            <div class="img-area">
+                <img alt="" class="feedback-author-avatar" src="images/avatar.png">
+            </div>
+            <span class="author-name">Marthin Lutther</span>
+        </div>
+    </div>
+</section>
+</body>
+</html>
