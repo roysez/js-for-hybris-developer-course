@@ -1,10 +1,11 @@
 
 .banner-area {
-  background-image: url(src/app/images/background-image.jpg);
+  background-image: url(../../../assets/images/background-image.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
   height: 100%;
+  color: white;
 }
 
 .banner-area::before {
@@ -36,20 +37,6 @@
   width: 60%;
 }
 
-.img-area {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 5px solid #fff;
-  display: inline-block;
-}
-
-.img-area>img {
-  max-width: 100%;
-  height: auto;
-}
-
 .intro > h1, h2 {
   text-align: center;
 }
@@ -77,8 +64,4 @@
 .learn-more-button:hover {
   background-color: #ffffff; /* Green */
   color: black;
-}
-
-#avatar {
-  content: url(src/app/images/avatar.png);
 }

@@ -1,0 +1,20 @@
+.exp-section {
+  max-width: 1300px;
+  margin-left: 280px;
+}
+
+.title {
+  font-size: 3em;
+  color: #00ac26;
+}
+.note {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 0;
+  border-bottom: dotted 3px #00ac26;
+  padding: 1em;
+}
+.company-block {
+  padding-right: 10px;
+  min-width: 300px;
+}

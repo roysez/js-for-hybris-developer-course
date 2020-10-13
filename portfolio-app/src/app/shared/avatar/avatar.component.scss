@@ -1,0 +1,19 @@
+
+.img-area {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #fff;
+  display: inline-block;
+}
+
+.img-area > img {
+  max-width: 100%;
+  height: auto;
+}
+
+#avatar {
+  content: url(../../../assets/images/avatar.png);
+}
+

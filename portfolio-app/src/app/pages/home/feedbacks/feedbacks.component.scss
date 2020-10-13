@@ -1,0 +1,40 @@
+.feedbacks-section {
+  max-width: 1300px;
+  margin-left: 280px;
+}
+
+.title {
+  font-size: 3em;
+  color: #00ac26;
+}
+
+.feedback-content {
+  background-color: #dedede;
+  padding: 1.3rem;
+}
+
+.feedback-author {
+  position: relative;
+  top:-12px;
+  display: flex;
+  /* align-self: center;    <---- REMOVE */
+  align-items: center;   /* <---- NEW    */
+}
+.img-area {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #fff;
+  display: inline-block;
+}
+
+.img-area > img {
+  max-width: 100%;
+  height: auto;
+}
+
+.author-name {
+  padding-left: 1.3rem;
+  font-size: 1.3rem;
+}

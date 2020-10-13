@@ -1,1 +1,30 @@
-<p>side-nav works!</p>
+<nav class="nav-area">
+  <div class="intro">
+    <app-avatar></app-avatar>
+    <h1>John Snow</h1>
+    <ul class="navigation-list">
+      <li class="navigation-item">
+        <a [routerLink]="['about']">About Me</a>
+      </li>
+      <li class="navigation-item">
+        <a [routerLink]="['education']">Education</a>
+      </li>
+      <li class="navigation-item">
+        <a [routerLink]="['experience']">Experience</a>
+      </li>
+      <li class="navigation-item">
+        <a [routerLink]="['skills']">Skills</a>
+      </li>
+      <li class="navigation-item">
+        <a href="">Portfolio</a>
+      </li>
+      <li class="navigation-item">
+        <a [routerLink]="['contacts']">Contacts</a>
+      </li>
+      <li class="navigation-item">
+        <a [routerLink]="['feedbacks']">Feedback</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>

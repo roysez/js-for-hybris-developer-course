@@ -1,0 +1,27 @@
+.contacts-section {
+  max-width: 1300px;
+  margin-left: 280px;
+}
+
+.title {
+  font-size: 3em;
+  color: #00ac26;
+}
+.item {
+  margin: 10px;
+}
+.contact-icon {
+  color: #00ac26;
+  font-size: 1.6em;
+  padding: 10px;
+  min-width: 40px;
+  text-align: center;
+  border-right: solid #c4c2c2 1px;
+  border-bottom: solid #c4c2c2 1px;
+}
+.contact-information {
+  padding-left: 10px;
+  font-weight: bold;
+  vertical-align: super;
+  font-size: 1em;
+}
