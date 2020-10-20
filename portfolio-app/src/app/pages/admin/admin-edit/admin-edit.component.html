@@ -1,0 +1,158 @@
+<div class="container">
+  <form class="edit-form" [formGroup]="editForm" (ngSubmit)="submitEdit()">
+
+    <div class="container row" formGroupName="aboutGroup">
+      <div class="col-sm-3">
+        <h2>About Me</h2>
+      </div>
+      <div class="col-sm-7">
+        <div class="form-group">
+          <label>Enter information about you</label>
+          <textarea class="form-control" formControlName="aboutMe">
+        </textarea>
+          <small class="form-text text-muted"
+                 *ngIf="editForm.get('aboutGroup.aboutMe').invalid && editForm.get('aboutGroup.aboutMe').touched">
+            about me field is incorrect
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <div class="container row" formArrayName="educations">
+      <div class="col-sm-3">
+        <h2>Education</h2>
+      </div>
+      <div class="col-sm-7">
+        <div class="form-group"
+             *ngFor="let control of editForm.get('educations')['controls'] ; let idx = index"
+             formGroupName="{{idx}}">
+          <div class="form-group">
+            <label>Title</label>
+            <input class="form-control" formControlName="title">
+          </div>
+          <div class="form-group">
+            <label>Year</label>
+            <input class="form-control" formControlName="year">
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <textarea class="form-control" formControlName="description"></textarea>
+          </div>
+          <button class="btn btn-primary" type="button" (click)="addEducation()">Add education</button>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="container row" formArrayName="experiences">
+      <div class="col-sm-3">
+        <h2>Experience</h2>
+      </div>
+      <div class="col-sm-7">
+        <div class="form-group"
+             *ngFor="let control of editForm.get('experiences')['controls'] ; let idx = index"
+             formGroupName="{{idx}}">
+          <div class="form-group">
+            <label>Company</label>
+            <input class="form-control" formControlName="company">
+          </div>
+          <div class="form-group">
+            <label>Period</label>
+            <input class="form-control" formControlName="period">
+          </div>
+          <div class="form-group">
+            <label>Position</label>
+            <input class="form-control" formControlName="position">
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <textarea class="form-control" formControlName="description"></textarea>
+          </div>
+          <button class="btn btn-primary" type="button" (click)="addExperience()">Add experience</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container row" formArrayName="skills">
+      <div class="col-sm-3">
+        <h2>Skills</h2>
+      </div>
+      <div class="col-sm-7">
+        <div class="form-group"
+             *ngFor="let control of editForm.get('skills')['controls'] ; let idx = index"
+             formGroupName="{{idx}}">
+          <div class="form-group">
+            <label>Skill</label>
+            <input class="form-control" formControlName="company">
+          </div>
+          <div class="form-group">
+            <label>Level</label>
+            <input class="form-control" formControlName="period">
+          </div>
+          <button class="btn btn-primary" type="button" (click)="addSkill()">Add skill</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container row" formArrayName="contacts">
+      <div class="col-sm-3">
+        <h2>Contacts</h2>
+      </div>
+      <div class="col-sm-7">
+        <div class="form-group"
+             *ngFor="let control of editForm.get('contacts')['controls'] ; let idx = index"
+             formGroupName="{{idx}}">
+          <div class="form-group">
+            <label>Icon Name</label>
+            <input class="form-control" formControlName="iconName">
+          </div>
+          <div class="form-group">
+            <label>Title</label>
+            <input class="form-control" formControlName="title">
+          </div>
+          <div class="form-group">
+            <label>Value</label>
+            <input class="form-control" formControlName="value">
+          </div>
+          <div class="form-group">
+            <label>Is link</label>
+            <input type="checkbox" class="form-control" formControlName="link">
+          </div>
+          <button class="btn btn-primary" type="button" (click)="addContact()">Add Contact</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container row" formArrayName="feedbacks">
+      <div class="col-sm-3">
+        <h2>Feedback</h2>
+      </div>
+      <div class="col-sm-7">
+        <div class="form-group"
+             *ngFor="let control of editForm.get('feedbacks')['controls'] ; let idx = index"
+             formGroupName="{{idx}}">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input class="form-control" formControlName="name">
+          </div>
+          <div class="form-group">
+            <label>Role</label>
+            <input class="form-control" formControlName="role">
+          </div>
+          <div class="form-group">
+            <label>Link</label>
+            <input class="form-control" formControlName="link">
+          </div>
+          <div class="form-group">
+            <label>Text</label>
+            <textarea class="form-control" formControlName="text"></textarea>
+          </div>
+          <button class="btn btn-primary" type="button" (click)="addFeedback()">Add feedback</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary container-fluid" type="submit" [disabled]="editForm.invalid">Submit form</button>
+  </form>
+</div>

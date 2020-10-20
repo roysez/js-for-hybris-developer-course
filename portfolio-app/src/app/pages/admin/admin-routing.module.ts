@@ -2,6 +2,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {NgModule} from "@angular/core";
 import {AdminComponent} from "./admin.component";
 import {AdminAuthComponent} from "./admin-auth/admin-auth.component";
+import {AdminEditComponent} from "./admin-edit/admin-edit.component";
 
 const adminPageRoutes: Routes = [
   {
@@ -11,6 +12,10 @@ const adminPageRoutes: Routes = [
       {
         path: "login",
         component: AdminAuthComponent
+      },
+      {
+        path: "edit",
+        component: AdminEditComponent
       }
     ]
   }
