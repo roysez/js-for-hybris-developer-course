@@ -153,6 +153,8 @@
       </div>
     </div>
 
-    <button class="btn btn-primary container-fluid" type="submit" [disabled]="editForm.invalid">Submit form</button>
+
+    <button class="btn btn-primary" type="submit" [disabled]="editForm.invalid" style="margin-right: 10px">Submit form</button>
+    <button class="btn btn-primary" (click)="resetForm()" [disabled]="editForm.untouched">Reset form</button>
   </form>
 </div>

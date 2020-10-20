@@ -108,4 +108,8 @@ export class AdminEditComponent implements OnInit {
     });
     (<FormArray>this.editForm.get('feedbacks')).push(newFeedbackGroup);
   }
+
+  resetForm() {
+    this.editForm.reset();
+  }
 }
