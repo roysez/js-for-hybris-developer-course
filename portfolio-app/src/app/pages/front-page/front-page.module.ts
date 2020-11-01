@@ -11,7 +11,7 @@ import {SharedModule} from "../../shared/shared.module";
     CommonModule,
     RouterModule.forChild([
       {
-        path: "front-page",
+        path: "",
         component: FrontPageComponent
       }
     ]),

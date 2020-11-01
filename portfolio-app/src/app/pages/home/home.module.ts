@@ -10,6 +10,7 @@ import {FeedbacksComponent} from './feedbacks/feedbacks.component';
 import {SkillsComponent} from './skills/skills.component';
 import {HomeRoutingModule} from "./home-routing.module";
 import {SharedModule} from "../../shared/shared.module";
+import {ContentService} from "../../shared/content.service";
 
 
 @NgModule({
@@ -18,7 +19,12 @@ import {SharedModule} from "../../shared/shared.module";
     CommonModule,
     HomeRoutingModule,
     SharedModule
+  ],
+  providers : [
+    ContentService
   ]
 })
 export class HomeModule {
+
+
 }

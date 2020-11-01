@@ -3,10 +3,12 @@ import {NgModule} from "@angular/core";
 import {AdminComponent} from "./admin.component";
 import {AdminAuthComponent} from "./admin-auth/admin-auth.component";
 import {AdminEditComponent} from "./admin-edit/admin-edit.component";
+import {AdminAuthGuard} from "./admin-auth/admin-auth.guard";
 
 const adminPageRoutes: Routes = [
+  {path: "", redirectTo: "/edit", pathMatch: "full"},
   {
-    path: "admin",
+    path: "",
     component: AdminComponent,
     children: [
       {
@@ -15,7 +17,8 @@ const adminPageRoutes: Routes = [
       },
       {
         path: "edit",
-        component: AdminEditComponent
+        component: AdminEditComponent,
+        canActivate: [AdminAuthGuard]
       }
     ]
   }

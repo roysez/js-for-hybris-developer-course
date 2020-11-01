@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormArray, FormControl, FormGroup, Validators} from "@angular/forms";
+import {ContentService} from "../../../shared/content.service";
 
 @Component({
   selector: 'app-admin-edit',
@@ -42,7 +43,7 @@ export class AdminEditComponent implements OnInit {
     text: new FormControl('', Validators.maxLength(300))
   });
 
-  constructor() {
+  constructor(private contentService : ContentService) {
   }
 
   ngOnInit(): void {
@@ -59,7 +60,8 @@ export class AdminEditComponent implements OnInit {
   }
 
   submitEdit() {
-    console.log(this.editForm)
+    console.log(this.editForm);
+    this.contentService.addAboutInformation(this.editForm.value['aboutGroup'])
   }
 
   addEducation() {

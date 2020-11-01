@@ -20,8 +20,11 @@
         Password field is incorrect
       </small>
     </div>
-
     <button class="btn btn-primary" type="submit" [disabled]="loginForm.invalid">Submit form</button>
+    <small class="form-text text-muted"
+           *ngIf="this.wrongCredentials">
+      Wrong credentials
+    </small>
   </form>
 </div>
 

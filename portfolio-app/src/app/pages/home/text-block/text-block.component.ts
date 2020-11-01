@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ContentService} from "../../../shared/content.service";
 
 @Component({
   selector: 'app-text-block',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextBlockComponent implements OnInit {
 
-  constructor() { }
+  constructor(private contentService: ContentService) {
+  }
 
   ngOnInit(): void {
   }

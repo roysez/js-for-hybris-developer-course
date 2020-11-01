@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {AdminAuthService} from "./admin-auth.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-admin-auth',
@@ -9,8 +11,10 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 export class AdminAuthComponent implements OnInit {
 
   loginForm: FormGroup
+  wrongCredentials: boolean
 
-  constructor() {
+  constructor(private adminAuth: AdminAuthService,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
@@ -22,10 +26,15 @@ export class AdminAuthComponent implements OnInit {
         Validators.required,
         Validators.pattern('^[A-Za-z1-9 ]+$')])
     });
+
+    this.route.queryParams.subscribe(params => {
+        this.wrongCredentials = params['wrongCredentials'];
+        }
+      );
   }
 
   submitLogin() {
     if (this.loginForm.valid)
-      console.log("Form submitted ", this.loginForm);
+      this.adminAuth.submitLogin(this.loginForm.value);
   }
 }

@@ -5,6 +5,7 @@ import { AdminAuthComponent } from './admin-auth/admin-auth.component';
 import {AdminRoutingModule} from "./admin-routing.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AdminEditComponent } from './admin-edit/admin-edit.component';
+import {ContentService} from "../../shared/content.service";
 
 
 
@@ -15,6 +16,9 @@ import { AdminEditComponent } from './admin-edit/admin-edit.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule
+  ],
+  providers : [
+    ContentService
   ]
 })
 export class AdminModule { }
