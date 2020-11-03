@@ -15,7 +15,6 @@ describe('ContentService', () => {
   });
 
   it('about information should be saved', () => {
-    const service = new ContentService();
     const dataInformation = {
       'aboutMe': 'About information text'
     }
@@ -24,7 +23,6 @@ describe('ContentService', () => {
   })
 
   it('about information should be retrieved', () => {
-    const service = new ContentService();
     service.aboutInformation = {
       'aboutMe': 'About information text'
     }

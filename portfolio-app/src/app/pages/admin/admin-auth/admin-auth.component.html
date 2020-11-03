@@ -5,7 +5,7 @@
 
     <div class="form-group">
       <label>Login</label>
-      <input class="form-control" type="text" placeholder="login" formControlName="login">
+      <input class="form-control" name="login" type="text" placeholder="login" formControlName="login">
       <small class="form-text text-muted"
              *ngIf="loginForm.get('login').invalid && loginForm.get('login').touched">
         Email field is incorrect
@@ -13,14 +13,14 @@
     </div>
 
     <div class="form-group">
-      <label>Пароль</label>
-      <input class="form-control" type="password" placeholder="your password" formControlName="password">
+      <label>Password</label>
+      <input class="form-control " name="password" type="password" placeholder="your password" formControlName="password">
       <small class="form-text text-muted"
              *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
         Password field is incorrect
       </small>
     </div>
-    <button class="btn btn-primary" type="submit" [disabled]="loginForm.invalid">Submit form</button>
+    <button class="btn btn-primary submit-button" type="submit" [disabled]="loginForm.invalid">Submit form</button>
     <small class="form-text text-muted"
            *ngIf="this.wrongCredentials">
       Wrong credentials

@@ -1,6 +1,4 @@
-import {Inject, Injectable} from '@angular/core';
-import {LOCAL_STORAGE, StorageService} from "ngx-webstorage-service";
-
+import {Injectable} from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
@@ -9,7 +7,7 @@ export class ContentService {
   public aboutInformation: AboutInformation;
   public activeSkills = [];
 
-  constructor(@Inject(LOCAL_STORAGE) private storage: StorageService) {
+  constructor() {
   }
 
   addAboutInformation(data) {

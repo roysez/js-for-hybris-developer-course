@@ -27,10 +27,10 @@ export class AdminAuthComponent implements OnInit {
         Validators.pattern('^[A-Za-z1-9 ]+$')])
     });
 
-    this.route.queryParams.subscribe(params => {
-        this.wrongCredentials = params['wrongCredentials'];
-        }
-      );
+    // this.route.queryParams.subscribe(params => {
+    //     this.wrongCredentials = params['wrongCredentials'];
+    //     }
+    //   );
   }
 
   submitLogin() {
