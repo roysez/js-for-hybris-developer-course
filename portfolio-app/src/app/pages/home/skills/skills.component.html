@@ -1,39 +1,30 @@
 <section class="skills-section">
-  <h1 class="title">
+  <div class="row">
+  <h1 class="title col-sm-3">
     Skills
   </h1>
-  <div class="skills">
-    <div class="skill">
-      <div class="skill-bar">
-        <div class="skill-per" style="width: 95%">
-          HTML
-        </div>
-      </div>
-      <div class="skill">
-        <div class="skill-bar">
-          <div class="skill-per" style="width: 65%">
-            CSS
-          </div>
-        </div>
-      </div>
-      <div class="skill">
-        <div class="skill-bar">
-          <div class="skill-per" style="width: 45%">
-            Javascript
-          </div>
-        </div>
-      </div>
-    </div>
+    <button type="button" class="btn btn-info col-sm-3" (click)="this.openSkillForm()">{{this.shouldShowSkillForm ? 'Close' : 'Open'}} add new skill form</button>
   </div>
-  <div class="metrics">
-    <div class="metric-line" style="width: 20%">
-      Beginner
+  {{activeSkills}}
+  <div class="skills" *ngIf="activeSkills.length > 0">
+    <div *ngFor="let skill of activeSkills" class="skill">
+      <div class="bar__container">
+        <div class="bar__name" [style]="calculateStyles(skill)">
+          {{skill['skillName']}}
+        </div>
+      </div>
     </div>
-    <div class="metric-line" style="width: 20%">
-      Advanced
-    </div>
-    <div class="metric-line" style="width: 40%">
-      Professional
-    </div>
+<!--    <div class="metrics">-->
+<!--      <div class="metric-line" style="width: 20%">-->
+<!--        Beginner-->
+<!--      </div>-->
+<!--      <div class="metric-line" style="width: 20%">-->
+<!--        Advanced-->
+<!--      </div>-->
+<!--      <div class="metric-line" style="width: 40%">-->
+<!--        Professional-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
+  <app-skills-form *ngIf="shouldShowSkillForm"></app-skills-form>
 </section>

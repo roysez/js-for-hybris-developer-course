@@ -8,7 +8,7 @@ import {ContentService} from "../../../shared/content.service";
 })
 export class TextBlockComponent implements OnInit {
 
-  constructor(private contentService: ContentService) {
+  constructor(public contentService: ContentService) {
   }
 
   ngOnInit(): void {

@@ -1,13 +1,15 @@
-import {Injectable} from '@angular/core';
+import {Inject, Injectable} from '@angular/core';
+import {LOCAL_STORAGE, StorageService} from "ngx-webstorage-service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContentService {
 
-  public aboutInformation : AboutInformation;
+  public aboutInformation: AboutInformation;
+  public activeSkills = [];
 
-  constructor() {
+  constructor(@Inject(LOCAL_STORAGE) private storage: StorageService) {
   }
 
   addAboutInformation(data) {
@@ -16,11 +18,23 @@ export class ContentService {
   }
 
   getAboutInformation() {
-
     return this.aboutInformation == undefined ? '' : this.aboutInformation.aboutMe;
+  }
+
+  addNewSkill(newSkillValue: Skill) {
+    this.activeSkills.push(newSkillValue);
+  }
+
+  getActiveSkills() {
+    return this.activeSkills;
   }
 }
 
 interface AboutInformation {
-  aboutMe?: string;
+  aboutMe?: string
+}
+
+interface Skill {
+  skillName?: string,
+  skillRange?: Number
 }

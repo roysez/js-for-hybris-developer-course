@@ -1,0 +1,18 @@
+<div class="container">
+  <form class="edit-form" [formGroup]="addSkillForm" (ngSubmit)="submitAddSkillForm()">
+
+    <div class="container row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Skill name</label>
+          <input placeholder="Enter name:" class="form-control" formControlName="skillName">
+        </div>
+        <div class="form-group">
+          <label>Skill range ( Max : 100 )</label>
+          <input placeholder="Enter range from 0% to 100%:"  class="form-control" formControlName="skillRange">
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="addSkillForm.invalid" style="margin-right: 10px">Submit</button>
+  </form>
+</div>

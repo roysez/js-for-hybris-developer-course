@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { ContentService } from './content.service';
+import {ContentService} from './content.service';
 
 describe('ContentService', () => {
   let service: ContentService;
@@ -13,4 +13,22 @@ describe('ContentService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('about information should be saved', () => {
+    const service = new ContentService();
+    const dataInformation = {
+      'aboutMe': 'About information text'
+    }
+    service.addAboutInformation(dataInformation);
+    expect(service.aboutInformation).toBe(dataInformation);
+  })
+
+  it('about information should be retrieved', () => {
+    const service = new ContentService();
+    service.aboutInformation = {
+      'aboutMe': 'About information text'
+    }
+    let result = service.getAboutInformation();
+    expect(result).toBe(service.aboutInformation['aboutMe']);
+  })
 });
