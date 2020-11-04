@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {ContentService} from "../../../shared/content.service";
+import {AppState} from "../../../app.state";
+import {Store} from "@ngrx/store";
+import {Observable} from "rxjs";
+import {Skill} from "../../../models/skill.model";
 
 @Component({
   selector: 'app-skills',
@@ -9,14 +12,15 @@ import {ContentService} from "../../../shared/content.service";
 export class SkillsComponent implements OnInit {
 
   shouldShowSkillForm: boolean = false;
-  activeSkills = [];
+  activeSkills: Observable<Skill[]>
 
-  constructor(private contentService: ContentService) {
+  constructor(private store: Store<AppState>) {
+    this.activeSkills = store.select('skill')
   }
 
   ngOnInit(): void {
-    this.activeSkills = this.contentService.getActiveSkills();
   }
+
 
   openSkillForm() {
     this.shouldShowSkillForm = !this.shouldShowSkillForm;

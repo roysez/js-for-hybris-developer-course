@@ -1,30 +1,21 @@
 <section class="skills-section">
   <div class="row">
-  <h1 class="title col-sm-3">
-    Skills
-  </h1>
-    <button type="button" class="btn btn-info col-sm-3" (click)="this.openSkillForm()">{{this.shouldShowSkillForm ? 'Close' : 'Open'}} add new skill form</button>
+    <h1 class="title col-sm-3">
+      Skills
+    </h1>
+    <button type="button" class="btn btn-info col-sm-3"
+            (click)="this.openSkillForm()">{{this.shouldShowSkillForm ? 'Close' : 'Open'}} add new skill form
+    </button>
   </div>
-  {{activeSkills}}
-  <div class="skills" *ngIf="activeSkills.length > 0">
-    <div *ngFor="let skill of activeSkills" class="skill">
+
+  <div class="skills">
+    <div *ngFor="let skill of activeSkills | async" class="skill">
       <div class="bar__container">
         <div class="bar__name" [style]="calculateStyles(skill)">
-          {{skill['skillName']}}
+          {{skill['name']}}
         </div>
       </div>
     </div>
-<!--    <div class="metrics">-->
-<!--      <div class="metric-line" style="width: 20%">-->
-<!--        Beginner-->
-<!--      </div>-->
-<!--      <div class="metric-line" style="width: 20%">-->
-<!--        Advanced-->
-<!--      </div>-->
-<!--      <div class="metric-line" style="width: 40%">-->
-<!--        Professional-->
-<!--      </div>-->
-<!--    </div>-->
   </div>
   <app-skills-form *ngIf="shouldShowSkillForm"></app-skills-form>
 </section>
